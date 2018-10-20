@@ -36,8 +36,8 @@ function runLiri() {
                     console.log(error);
                 };
             });
-            //Running without key, waiting on key. Not sure why this works
-            var queryURL = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=()"
+            //Waiting on key
+            var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
             request(queryURL, function (error, response, body) {
                 if (!error && response.statusCode === 200) {
                     var data = JSON.parse(body);
