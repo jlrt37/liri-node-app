@@ -36,8 +36,7 @@ function runLiri() {
                     console.log(error);
                 };
             });
-            //Waiting on key
-            var queryURL = "https://rest.bandsintown.com/artists/" + artist + "/events?app_id=codingbootcamp"
+            var queryURL = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=codingbootcamp"
             request(queryURL, function (error, response, body) {
                 if (!error && response.statusCode === 200) {
                     var data = JSON.parse(body);
