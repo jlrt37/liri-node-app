@@ -36,7 +36,7 @@ function runLiri() {
                     console.log(error);
                 };
             });
-            //Will not run, waiting on key
+            //Running without key, waiting on key. Not sure why this works
             var queryURL = "https://rest.bandsintown.com/artists/" + userInput + "/events?app_id=()"
             request(queryURL, function (error, response, body) {
                 if (!error && response.statusCode === 200) {
